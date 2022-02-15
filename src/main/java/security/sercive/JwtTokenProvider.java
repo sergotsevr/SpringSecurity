@@ -22,12 +22,12 @@ public class JwtTokenProvider {
 
     private UserDetailsService userDetailsService;
 
-    @Value("jwt.header")
+    @Value("${jwt.header}")
     private String header;
 
-    @Value("jwt.secretKey")
+    @Value("${jwt.key}")
     private String secretKey;
-    @Value("jwt.validityInMillis:1000")
+    @Value("${jwt.validityInMillis:1000}")
     private Long validityInMillis;
 
     public JwtTokenProvider(@Qualifier("userDetailsServiceIml") UserDetailsService userDetailsService) {
