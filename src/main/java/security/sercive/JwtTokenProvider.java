@@ -27,7 +27,7 @@ public class JwtTokenProvider {
 
     @Value("${jwt.key}")
     private String secretKey;
-    @Value("${jwt.validityInMillis:1000}")
+    @Value("${jwt.validityInMillis:30000}")
     private Long validityInMillis;
 
     public JwtTokenProvider(@Qualifier("userDetailsServiceIml") UserDetailsService userDetailsService) {
